@@ -1,0 +1,17 @@
+body {
+    min-width: 450px;
+    max-width: 1050px;
+    padding: 0;
+    margin: 0 auto;
+
+    background: url("img/normal-background.jpg") repeat;
+
+    font-family: "Tw Cen MT", sans-serif;
+    font-size: 28px;
+    line-height: 18px;
+    color: #003340;
+}
+
+.separated {
+    border-bottom: solid 5px #879E9D;
+}
