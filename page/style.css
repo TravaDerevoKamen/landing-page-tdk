@@ -26,8 +26,13 @@ h1, h2 {
     font-size: 40px;
 }
 
+h2 {
+    font-weight: normal;
+}
+
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -61,15 +66,85 @@ header .instagram img {
 
 .total-info {
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
     align-items: stretch;
+    justify-content: center;
 }
 
 .total-info .content {
     background-color: rgba(179, 208, 178, 0.75);
     padding: 5%;
+    box-sizing: border-box;
+    max-width: 577px;
 }
 
 .total-info .content h1 {
     margin-bottom: 10%;
+}
+
+.advantage {
+    display: flex;
+}
+
+.advantage .content {
+    position: relative;
+    background-color: #E4EFCD;
+}
+
+.advantage .move-right {
+    text-align: left;
+}
+
+.advantage .move-left {
+    text-align: right;
+}
+
+.underline {
+    position: relative;
+    display: inline-block;
+}
+
+.underline::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+    border-bottom: solid 2px #666;
+    width: 125%; /* todo width must be: (parent width) + 20px */
+}
+
+.move-left .underline::after {
+    left: -25%;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+
+    background-color: #6A7676;
+
+    font-size: 18px;
+    font-family: "Calibri", sans-serif;
+    color: #DCDBDB;
+}
+
+.number-container p {
+    margin: 0 0 8px;
+}
+
+.number > *{
+    vertical-align: middle;
+}
+
+.number img {
+    margin-right: 5px;
+}
+
+.number a {
+    color: inherit;
+    text-decoration: none;
 }
