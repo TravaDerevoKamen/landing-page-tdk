@@ -8,10 +8,68 @@ body {
 
     font-family: "Tw Cen MT", sans-serif;
     font-size: 28px;
-    line-height: 18px;
+    /* todo maybe change line-height*/
     color: #003340;
+    border: solid 5px #879E9D; /* todo delete */
+}
+
+h1, h3 {
+    font-family: "Leelawadee", sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h1, h2 {
+    font-size: 40px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .instagram {
+    display: block;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    transition: background-color 0.5s ease-out;
+
+    background-color: #37873A;
+    border-radius: 50%;
+}
+
+header .instagram:hover {
+    background-color: #A44649;
+}
+
+header .instagram img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .separated {
     border-bottom: solid 5px #879E9D;
+}
+
+.total-info {
+    display: flex;
+    text-align: center;
+    align-items: stretch;
+}
+
+.total-info .content {
+    background-color: rgba(179, 208, 178, 0.75);
+    padding: 5%;
+}
+
+.total-info .content h1 {
+    margin-bottom: 10%;
 }
