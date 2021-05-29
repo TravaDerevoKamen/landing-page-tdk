@@ -36,6 +36,11 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+
+    position: fixed;
+    z-index: 100;
+    background-image: url("img/normal-background.jpg");
+    width: inherit;
 }
 
 header .instagram {

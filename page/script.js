@@ -9,3 +9,12 @@ window.onscroll = function () {
         }
     }
 };
+
+
+function adjustWidth() {
+    let parentWidth = document.querySelector("body").offsetWidth;
+    document.querySelector("header").style.width = parentWidth.toString() + "px";
+}
+
+adjustWidth();
+window.onresize = adjustWidth;
