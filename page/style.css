@@ -85,15 +85,42 @@ header .instagram img {
 
 .advantage {
     display: flex;
+    /*todo flex-wrap: wrap;*/
+    overflow: hidden;
 }
 
 .advantage .content {
-    position: relative;
     background-color: #E4EFCD;
+    /*todo box-sizing: border-box;*/
+    /*todo max-width: 516px;*/
+}
+
+.advantage .content h2 {
+    margin-bottom: 0;
+}
+
+.advantage .content p {
+    margin-top: 14px;
+}
+
+.advantage .move-right, .advantage .move-left {
+    position: relative;
+    z-index: 10;
 }
 
 .advantage .move-right {
+    position: relative;
     text-align: left;
+}
+
+.advantage .move-right::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(68,68,68,0.5);
+    width: 1000px;
+    height: 100%;
+    transform: translateX(-14%) skewX(-45deg);
+    z-index: -1;
 }
 
 .advantage .move-left {
@@ -107,7 +134,7 @@ header .instagram img {
 
 .underline::after {
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     left: 0;
 
     content: "";
