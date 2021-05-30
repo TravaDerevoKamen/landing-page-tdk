@@ -11,10 +11,31 @@ window.onscroll = function () {
 };
 
 
-function adjustWidth() {
-    let parentWidth = document.querySelector("body").offsetWidth;
-    document.querySelector("header").style.width = parentWidth.toString() + "px";
+function adjustHeaderWidth() {
+    let body = document.querySelector("body");
+
+    let parentWidth = body.offsetWidth;
+
+    let headerWidth = parentWidth - 2 * getBorderWidth(body);
+    document.querySelector("header").style.width = `${headerWidth}px`;
 }
 
-adjustWidth();
-window.onresize = adjustWidth;
+function getBorderWidth(element) {
+    let borderWidthFromCss = window.getComputedStyle(element).borderWidth;
+    return Number.parseInt(borderWidthFromCss);
+}
+
+function setMarginForMain() {
+    let header = document.querySelector("header");
+    document.querySelector("main").style.marginTop = window.getComputedStyle(header).height;
+}
+
+adjustHeaderWidth();
+setMarginForMain();
+window.onresize = function () {
+    adjustHeaderWidth();
+    setMarginForMain();
+}
+
+
+document.querySelector("body").classList.remove("hidden");

@@ -5,12 +5,12 @@ body {
     margin: 0 auto;
 
     background: url("img/normal-background.jpg") repeat;
+    transition: opacity 0.8s ease-in;
+    border: solid 5px #879E9D;
 
     font-family: "Tw Cen MT", sans-serif;
     font-size: 28px;
-    /* todo maybe change line-height*/
     color: #003340;
-    border: solid 5px #879E9D; /* todo delete */
 }
 
 h1, h3 {
@@ -31,16 +31,21 @@ h2 {
 }
 
 
+.hidden {
+    opacity: 0;
+}
+
 header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 
+    background-image: url("img/normal-background.jpg");
+
     position: fixed;
     z-index: 100;
-    background-image: url("img/normal-background.jpg");
-    width: inherit;
+    top: 0;
 }
 
 header .instagram {
@@ -135,7 +140,7 @@ header .instagram img {
     transform: translateX(25px);
 }
 
-.advantage .move-right::before, .advantage .move-left::before{
+.advantage .move-right::before, .advantage .move-left::before {
     content: "";
     position: absolute;
     background-color: inherit;
@@ -144,12 +149,11 @@ header .instagram img {
     z-index: -1;
     transition: transform ease-out 1s;
 }
+
 .advantage .move-right::before {
-/*transform: translateX(-12%) skewX(-45deg);*/
-transform: skewX(-45deg);
+    transform: skewX(-45deg);
     left: -26%;
 }
-
 
 .advantage .move-left::before {
     transform: skewX(45deg);
@@ -209,7 +213,7 @@ footer {
     margin: 0 0 8px;
 }
 
-.number > *{
+.number > * {
     vertical-align: middle;
 }
 
