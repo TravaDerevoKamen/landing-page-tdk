@@ -1,6 +1,5 @@
 body {
-    min-width: 450px;
-    max-width: 1050px;
+    width: 1050px;
     padding: 0;
     margin: 0 auto;
 
@@ -8,22 +7,22 @@ body {
     transition: opacity 0.8s ease-in;
     border: solid 5px #879E9D;
 
-    font-family: "Tw Cen MT", sans-serif;
-    font-size: 28px;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 24px;
     color: #003340;
 }
 
 h1, h3 {
-    font-family: "Leelawadee", sans-serif;
+    font-family: "Trebuchet MS", sans-serif;
     font-weight: bold;
 }
 
 h3 {
-    font-size: 36px;
+    font-size: 34px;
 }
 
 h1, h2 {
-    font-size: 40px;
+    font-size: 36px;
 }
 
 h2 {
@@ -37,7 +36,6 @@ h2 {
 
 header {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 
@@ -77,17 +75,21 @@ header .instagram img {
 
 .total-info {
     display: flex;
-    flex-wrap: wrap;
-    text-align: center;
     align-items: stretch;
     justify-content: center;
 }
 
 .total-info .content {
-    background-color: rgba(179, 208, 178, 0.75);
-    padding: 5%;
+    padding: 5% 2%;
     box-sizing: border-box;
-    max-width: 577px;
+
+    text-align: center;
+    background-color: rgba(179, 208, 178, 0.75);
+}
+
+.total-info .content p {
+    text-align: left;
+    font-size: 28px;
 }
 
 .total-info .content h1 {
@@ -97,14 +99,11 @@ header .instagram img {
 
 .advantage {
     display: flex;
-    /*todo flex-wrap: wrap;*/
     overflow: hidden;
 }
 
 .advantage .content {
     background-color: #E4EFCD;
-    /*todo box-sizing: border-box;*/
-    /*todo max-width: 520px;*/
 }
 
 .advantage .content h2 {
@@ -157,7 +156,7 @@ header .instagram img {
 
 .advantage .move-left::before {
     transform: skewX(45deg);
-    right: -26%;
+    right: -28%;
 }
 
 .advantage .close-image.move-right::before {
@@ -188,11 +187,11 @@ header .instagram img {
 
     content: "";
     border-bottom: solid 2px #666;
-    width: 125%; /* todo width must be: (parent width) + 20px */
+    width: calc(100% + 30px);
 }
 
 .move-left .underline::after {
-    left: -25%;
+    left: -30px;
 }
 
 
