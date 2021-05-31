@@ -198,7 +198,7 @@ header .instagram img {
 
 footer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 20px 40px;
 
@@ -221,7 +221,23 @@ footer {
     margin-right: 5px;
 }
 
-.number a {
+footer a {
     color: inherit;
+}
+
+.number a {
     text-decoration: none;
+}
+
+.additional-info {
+    margin: 0;
+    list-style: none;
+}
+
+.additional-info > li {
+    margin-bottom: 10px;
+}
+
+.additional-info > li:first-child {
+    margin-bottom: 20px;
 }
