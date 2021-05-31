@@ -40,6 +40,7 @@ header {
     align-items: center;
 
     background-image: url("img/normal-background.jpg");
+    width: 1050px;
 
     position: fixed;
     z-index: 100;
@@ -71,6 +72,11 @@ header .instagram img {
 
 .separated {
     border-bottom: solid 5px #879E9D;
+}
+
+
+main {
+    margin-top: 107px;
 }
 
 .total-info {
@@ -159,19 +165,19 @@ header .instagram img {
     right: -28%;
 }
 
-.advantage .close-image.move-right::before {
+.advantage .covered-image.move-right::before {
     transform: translateX(-50%);
 }
 
-.advantage .close-image.move-left::before {
+.advantage .covered-image.move-left::before {
     transform: translateX(50%);
 }
 
-.advantage .close-image.move-right > * {
+.advantage .covered-image.move-right > * {
     transform: translateX(-200px);
 }
 
-.advantage .close-image.move-left > * {
+.advantage .covered-image.move-left > * {
     transform: translateX(200px);
 }
 

@@ -1,41 +1,33 @@
-let advantages = document.querySelectorAll('.advantage .close-image');
+let advantages = document.querySelectorAll('.advantage .covered-image');
+let secondAdvantage = advantages[1];
 
-window.onscroll = function () {
-    for (let advantage of advantages) {
-        if (window.pageYOffset > 200) {
-            advantage.classList.remove('close-image');
-        } else {
-            advantage.classList.add('close-image');
-        }
+function wasElementReached(el) {
+    let rect = el.getBoundingClientRect();
+    return rect.top <= (window.innerHeight || document.documentElement.clientHeight);
+}
+
+function toggleAnimationForAdvantages() {
+    if (wasElementReached(secondAdvantage)) {
+        uncoverImages();
+    } else {
+        coverImages();
     }
-};
-
-
-function adjustHeaderWidth() {
-    let body = document.querySelector("body");
-
-    let parentWidth = body.offsetWidth;
-
-    let headerWidth = parentWidth - 2 * getBorderWidth(body);
-    document.querySelector("header").style.width = `${headerWidth}px`;
 }
 
-function getBorderWidth(element) {
-    let borderWidthFromCss = window.getComputedStyle(element).borderWidth;
-    return Number.parseInt(borderWidthFromCss);
+function uncoverImages() {
+    for (let advantage of advantages) {
+        advantage.classList.remove('covered-image');
+    }
 }
 
-function setMarginForMain() {
-    let header = document.querySelector("header");
-    document.querySelector("main").style.marginTop = window.getComputedStyle(header).height;
+function coverImages() {
+    for (let advantage of advantages) {
+        advantage.classList.add('covered-image');
+    }
 }
 
-adjustHeaderWidth();
-setMarginForMain();
-window.onresize = function () {
-    adjustHeaderWidth();
-    setMarginForMain();
-}
-
+window.onload = toggleAnimationForAdvantages;
+window.onresize = toggleAnimationForAdvantages;
+window.onscroll = toggleAnimationForAdvantages;
 
 document.querySelector("body").classList.remove("hidden");
