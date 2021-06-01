@@ -167,7 +167,6 @@ main {
 
 .advantage .move-right::before {
     transform: skewX(-25deg);
-    /*left: -18%;*/
     left: -105px;
 }
 
