@@ -4,11 +4,11 @@ body {
     margin: 0 auto;
 
     background: url("img/normal-background.jpg") repeat;
-    transition: opacity 0.8s ease-in;
+    transition: opacity 0.5s ease-in-out;
     border: solid 5px #879E9D;
 
     font-family: "Fira Sans", sans-serif;
-    font-size: 24px;
+    font-size: 26px;
     color: #003340;
 }
 
@@ -106,10 +106,19 @@ main {
 .advantage {
     display: flex;
     overflow: hidden;
+    height: 450px;
 }
 
 .advantage .content {
     background-color: #E4EFCD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.advantage .content.move-left {
+    align-items: flex-end;
 }
 
 .advantage .content h2 {
@@ -117,7 +126,8 @@ main {
 }
 
 .advantage .content p {
-    margin-top: 14px;
+    margin-top: 25px;
+    line-height: 1.4;
 }
 
 .advantage .move-right, .advantage .move-left {
@@ -138,11 +148,11 @@ main {
 }
 
 .advantage .move-right > * {
-    transform: translateX(-25px);
+    transform: translateX(-15px);
 }
 
 .advantage .move-left > * {
-    transform: translateX(25px);
+    transform: translateX(15px);
 }
 
 .advantage .move-right::before, .advantage .move-left::before {
@@ -156,13 +166,14 @@ main {
 }
 
 .advantage .move-right::before {
-    transform: skewX(-45deg);
-    left: -26%;
+    transform: skewX(-25deg);
+    /*left: -18%;*/
+    left: -105px;
 }
 
 .advantage .move-left::before {
-    transform: skewX(45deg);
-    right: -28%;
+    transform: skewX(25deg);
+    right: -105px;
 }
 
 .advantage .covered-image.move-right::before {
