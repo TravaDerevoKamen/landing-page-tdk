@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Fira Sans'),
+    url('fonts/fira-sans-v11-cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('fonts/fira-sans-v11-cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+    width: 1050px;
+    padding: 0;
+    margin: 0 auto;
+
+    background: url("img/normal-background.jpg") repeat;
+    transition: opacity 0.6s ease-in-out;
+    border: solid 5px #879E9D;
+
+    font-family: "Fira Sans", sans-serif;
+    font-size: 26px;
+    color: #003340;
+}
+
+h1, h3 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 34px;
+}
+
+h1, h2 {
+    font-size: 36px;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+
+.hidden {
+    opacity: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-image: url("img/normal-background.jpg");
+    width: 1050px;
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+}
+
+header .instagram {
+    display: block;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    transition: background-color 0.5s ease-out;
+
+    background-color: #37873A;
+    border-radius: 50%;
+}
+
+header .instagram:hover {
+    background-color: #A44649;
+}
+
+header .instagram img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.separated {
+    border-bottom: solid 5px #879E9D;
+}
+
+
+main {
+    margin-top: 107px;
+}
+
+.total-info {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.total-info .content {
+    padding: 5% 2%;
+    box-sizing: border-box;
+
+    text-align: center;
+    background-color: rgba(179, 208, 178, 0.75);
+}
+
+.total-info .content p {
+    text-align: left;
+    font-size: 28px;
+}
+
+.total-info .content h1 {
+    margin-bottom: 10%;
+}
+
+
+.advantage {
+    display: flex;
+    overflow: hidden;
+    height: 450px;
+}
+
+.advantage .content {
+    background-color: #E4EFCD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.advantage .content.move-left {
+    align-items: flex-end;
+}
+
+.advantage .content h2 {
+    margin-bottom: 0;
+}
+
+.advantage .content p {
+    margin-top: 25px;
+    line-height: 1.4;
+}
+
+.advantage .move-right, .advantage .move-left {
+    position: relative;
+    z-index: 10;
+}
+
+.advantage .move-right {
+    text-align: left;
+}
+
+.advantage .move-left {
+    text-align: right;
+}
+
+.advantage .move-right > *, .advantage .move-left > * {
+    transition: transform ease-out 1s;
+}
+
+.advantage .move-right > * {
+    transform: translateX(-15px);
+}
+
+.advantage .move-left > * {
+    transform: translateX(15px);
+}
+
+.advantage .move-right::before, .advantage .move-left::before {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    width: 1100px;
+    height: 100%;
+    z-index: -1;
+    transition: transform ease-out 1s;
+}
+
+.advantage .move-right::before {
+    transform: skewX(-25deg);
+    left: -105px;
+}
+
+.advantage .move-left::before {
+    transform: skewX(25deg);
+    right: -105px;
+}
+
+.advantage .covered-image.move-right::before {
+    transform: translateX(-50%);
+}
+
+.advantage .covered-image.move-left::before {
+    transform: translateX(50%);
+}
+
+.advantage .covered-image.move-right > * {
+    transform: translateX(-200px);
+}
+
+.advantage .covered-image.move-left > * {
+    transform: translateX(200px);
+}
+
+.underline {
+    position: relative;
+    display: inline-block;
+}
+
+.underline::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+
+    content: "";
+    border-bottom: solid 2px #666;
+    width: calc(100% + 30px);
+}
+
+.move-left .underline::after {
+    left: -30px;
+}
+
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 40px;
+
+    background-color: #6A7676;
+
+    font-size: 18px;
+    font-family: "Calibri", sans-serif;
+    color: #DCDBDB;
+}
+
+.number-container p {
+    margin: 0 0 8px;
+}
+
+.number > * {
+    vertical-align: middle;
+}
+
+.number img {
+    margin-right: 5px;
+}
+
+footer a {
+    color: inherit;
+}
+
+.number a {
+    text-decoration: none;
+}
+
+.additional-info {
+    margin: 0;
+    list-style: none;
+}
+
+.additional-info > li {
+    margin-bottom: 10px;
+}
+
+.additional-info > li:first-child {
+    margin-bottom: 20px;
+}
